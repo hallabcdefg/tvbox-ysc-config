@@ -6,14 +6,14 @@
   "sites": [
     {
       "key": "豆瓣",
-      "name": "🐼┃QQ频道：肥猫宝贝┃",
+      "name": "QQ频道：肥猫宝贝",
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0
     },
     {
       "key": "豆瓣预告",
-      "name": "🐼┃豆瓣┃预告",
+      "name": "豆瓣预告",
       "type": 3,
       "api": "csp_YGP",
       "playerType": 2,
@@ -21,14 +21,14 @@
     },
     {
       "key": "config",
-      "name": "🐼┃配置┃中心",
+      "name": "配置中心",
       "type": 3,
       "api": "csp_Config",
       "playerType": 2
     },
     {
       "key": "PanMarket",
-      "name": "🐼┃网盘┃应用",
+      "name": "网盘应用",
       "type": 3,
       "api": "csp_PanMarket",
       "searchable": 0,
@@ -54,7 +54,7 @@
     },
     {
       "key": "alllive",
-      "name": "🎮┃游戏┃直播",
+      "name": "游戏直播",
       "type": 3,
       "api": "csp_Alllive",
       "style": {
@@ -70,7 +70,7 @@
     },
     {
       "key": "csp_FeiMaoUC",
-      "name": "⚡┃闪电┃优汐",
+      "name": "闪电优汐",
       "type": 3,
       "api": "csp_Duopan",
       "filterable": 1,
@@ -88,21 +88,21 @@
     },
     {
       "key": "潮流",
-      "name": "🏜┃潮流┃APP",
+      "name": "潮流APP",
       "type": 3,
       "api": "csp_AppRJ",
       "ext": "http://v.rbotv.cn"
     },
     {
       "key": "肥猫",
-      "name": "🐼┃肥猫┃APP",
+      "name": "肥猫APP",
       "type": 3,
       "api": "csp_AppQi",
       "ext": "https://lanyingjisu.oss-cn-wuhan-lr.aliyuncs.com/lyjszx.txt|oW5UxZ5kWVr1DI69"
     },
     {
       "key": "干饭",
-      "name": "🍚┃干饭┃APP",
+      "name": "干饭APP",
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
@@ -119,14 +119,14 @@
     },
     {
       "key": "光盘",
-      "name": "📀┃光盘┃APP",
+      "name": "光盘APP",
       "type": 3,
       "api": "csp_AppQi",
       "ext": "http://103.217.190.91:5566|hagYExMdMkeWfemK"
     },
     {
       "key": "行动",
-      "name": "😌┃行动┃APP",
+      "name": "行动APP",
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
@@ -143,7 +143,7 @@
     },
     {
       "key": "再来",
-      "name": "✌️┃再来┃APP",
+      "name": "再来APP",
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
@@ -160,7 +160,7 @@
     },
     {
       "key": "一碗",
-      "name": "🥣┃一碗┃APP",
+      "name": "一碗APP",
       "type": 3,
       "api": "csp_AppDrama2",
       "ext": {
@@ -177,13 +177,13 @@
     },
     {
       "key": "韩圈",
-      "name": "⭕┃韩圈 ┃APP",
+      "name": "韩圈 APP",
       "type": 3,
       "api": "csp_Hxq"
     },
     {
       "key": "一起",
-      "name": "👀┃一起┃APP",
+      "name": "一起APP",
       "type": 3,
       "api": "csp_AppYQK",
       "searchable": 1,
@@ -192,7 +192,7 @@
     },
     {
       "key": "咕噜",
-      "name": "🕊┃︎咕噜┃APP",
+      "name": "咕噜APP",
       "type": 3,
       "api": "csp_Gulu",
       "searchable": 1,
@@ -201,21 +201,21 @@
     },
     {
       "key": "蔬菜",
-      "name": "🫛┃蔬菜┃APP",
+      "name": "蔬菜APP",
       "type": 3,
       "api": "csp_AppGet",
       "ext": "https://allinadmin.oss-cn-hangzhou.aliyuncs.com/bk/9.txt|88689667dce61725"
     },
     {
       "key": "csp_Jpys",
-      "name": "🥇️┃金牌┃影视",
+      "name": "金牌影视",
       "type": 3,
       "api": "csp_Jpys",
       "ext": "https://y2s52n7.com"
     },
     {
       "key": "荐片",
-      "name": "🎬┃荐片┃影视",
+      "name": "荐片影视",
       "api": "csp_Jianpian",
       "type": 3,
       "playerType": "2",
@@ -223,7 +223,7 @@
     },
     {
       "key": "csp_SaoHuo",
-      "name": "🔥┃火火┃影视",
+      "name": "火火影视",
       "type": 3,
       "api": "csp_SaoHuo",
       "playerType": 2,
@@ -231,14 +231,14 @@
     },
     {
       "key": "csp_Gz360",
-      "name": "🍉┃瓜子┃影视",
+      "name": "瓜子影视",
       "type": 3,
       "api": "csp_Gz360",
       "playerType": 2
     },
     {
       "key": "厂长",
-      "name": "🏭┃厂长┃影视",
+      "name": "厂长影视",
       "type": 3,
       "playerType": "2",
       "api": "csp_Czsapp",
@@ -249,13 +249,13 @@
     },
     {
       "key": "csp_SP360",
-      "name": "📺┃360┃官源",
+      "name": "360官源",
       "type": 3,
       "api": "csp_SP360"
     },
     {
       "key": "csp_Bili",
-      "name": "🅱┃️哔哩┃合集",
+      "name": "哔哩合集",
       "type": 3,
       "api": "csp_Bili",
       "playerType": 2,
@@ -270,7 +270,7 @@
     },
     {
       "key": "csp_Dm84",
-      "name": "🤣┃动漫┃巴士",
+      "name": "动漫巴士",
       "type": 3,
       "playerType": "2",
       "api": "csp_Dm84",
@@ -278,21 +278,21 @@
     },
     {
       "key": "方舟",
-      "name": "🐷┃方舟┃动漫",
+      "name": "方舟动漫",
       "type": 3,
       "api": "csp_AppGet",
       "ext": "https://www.cyfz.top|e72cdfd629e8895d"
     },
     {
       "key": "番薯",
-      "name": "🍠┃番薯┃动漫",
+      "name": "番薯动漫",
       "type": 3,
       "api": "csp_AppGet",
       "ext": "https://app.omofun1.top|66dc309cbeeca454"
     },
     {
       "key": "csp_FirstAid",
-      "name": "🚑┃急救┃教学",
+      "name": "急救教学",
       "type": 3,
       "api": "csp_FirstAid",
       "searchable": 0,
@@ -305,7 +305,7 @@
     },
     {
       "key": "酷狗",
-      "name": "🐾┃酷狗┃音乐",
+      "name": "酷狗音乐",
       "type": 3,
       "api": "csp_Kugou",
       "playerType": 2,
@@ -320,7 +320,7 @@
     },
     {
       "key": "MTV",
-      "name": "🎧┃明星┃MV",
+      "name": "明星MV",
       "type": 3,
       "api": "csp_Bili",
       "playerType": 2,
@@ -335,7 +335,7 @@
     },
     {
       "key": "看球",
-      "name": "⚾┃看球┃直播",
+      "name": "看球直播",
       "type": 3,
       "api": "csp_Kanqiu",
       "searchable": 1,
@@ -348,7 +348,7 @@
     },
     {
       "key": "瓜子",
-      "name": "🏀┃瓜子┃体育",
+      "name": "瓜子体育",
       "type": 3,
       "api": "csp_GuaziTY",
       "style": {
@@ -364,21 +364,21 @@
     },
     {
       "key": "米搜",
-      "name": "🌖┃米搜┃网盘",
+      "name": "米搜网盘",
       "type": 3,
       "api": "csp_MiSou",
       "ext": "http://127.0.0.1:9978/file/fatcat/kk.txt"
     },
     {
       "key": "csp_PanSearch",
-      "name": "🚃┃盘搜┃网盘",
+      "name": "盘搜网盘",
       "type": 3,
       "api": "csp_PanSearch",
       "ext": "http://127.0.0.1:9978/file/fatcat/token.txt"
     },
     {
       "key": "儿童",
-      "name": "📚┃儿童┃启蒙",
+      "name": "儿童启蒙",
       "type": 3,
       "api": "./api/drpy2.min.js",
       "searchable": 0,
@@ -392,7 +392,7 @@
     },
     {
       "key": "csp_少儿",
-      "name": "📚┃少儿┃教育",
+      "name": "少儿教育",
       "type": 3,
       "api": "csp_Bili",
       "playerType": 2,
@@ -407,7 +407,7 @@
     },
     {
       "key": "csp_小学",
-      "name": "📚┃小学┃课堂",
+      "name": "小学课堂",
       "type": 3,
       "api": "csp_Bili",
       "playerType": 2,
@@ -422,7 +422,7 @@
     },
     {
       "key": "csp_初中",
-      "name": "📚┃初中┃课堂",
+      "name": "初中课堂",
       "type": 3,
       "api": "csp_Bili",
       "playerType": 2,
@@ -437,7 +437,7 @@
     },
     {
       "key": "csp_高中",
-      "name": "📚┃高中┃课堂",
+      "name": "高中课堂",
       "type": 3,
       "api": "csp_Bili",
       "playerType": 2,

@@ -7,14 +7,14 @@
   "sites": [
     {
       "key": "豆瓣2",
-      "name": "📢龙马精神、金戈铁马、骏马迎春、马行千里！",
+      "name": "龙马精神、金戈铁马、骏马迎春、马行千里！",
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0
     },
     {
       "key": "豆瓣1",
-      "name": "📢公告停更",
+      "name": "公告停更",
       "type": 3,
       "api": "csp_Notice",
       "searchable": 1,
@@ -23,7 +23,7 @@
     },
     {
       "key": "config",
-      "name": "🐲歌配置｜中心",
+      "name": "歌配置｜中心",
       "type": 3,
       "jar": "https://ncstatic-file.clewm.net/rsrc/2026/0810/15/d4ef68f275be721a92f218de955a8328.jpg;md5;c96b69de5ace48bcf0e522147364e048",
       "api": "csp_Config",
@@ -31,7 +31,7 @@
     },
     {
       "key": "配置中心",
-      "name": "❤配置｜中心",
+      "name": "配置｜中心",
       "type": 3,
       "api": "csp_Config",
       "searchable": 0,
@@ -43,7 +43,7 @@
     },
     {
       "key": "csp_wogg1",
-      "name": "🐲接口失效",
+      "name": "接口失效",
       "type": 3,
       "changeable": "0",
       "api": "csp_Duopan",
@@ -62,7 +62,7 @@
     },
     {
       "key": "csp_woog2",
-      "name": "🐲关注公众号",
+      "name": "关注公众号",
       "type": 3,
       "changeable": "0",
       "api": "csp_Duopan",
@@ -81,7 +81,7 @@
     },
     {
       "key": "夸快3",
-      "name": "❤装歌APP",
+      "name": "装歌APP",
       "type": 3,
       "api": "csp_PanWebShare",
       "searchable": 1,
@@ -96,7 +96,7 @@
     },
     {
       "key": "夸快2",
-      "name": "❤重新领取",
+      "name": "重新领取",
       "type": 3,
       "api": "csp_PanWebShare",
       "searchable": 1,
@@ -111,7 +111,7 @@
     },
     {
       "key": "push_agent",
-      "name": "📢手机｜推送",
+      "name": "手机｜推送",
       "type": 3,
       "api": "csp_Push",
       "searchable": 0,
@@ -120,7 +120,7 @@
     },
     {
       "key": "应用商店",
-      "name": "🛒本地包更新",
+      "name": "本地包更新",
       "type": 3,
       "api": "csp_Market",
       "searchable": 0,
@@ -129,7 +129,7 @@
     },
     {
       "key": "py_douban",
-      "name": "📢接口软件永远免费",
+      "name": "接口软件永远免费",
       "type": 3,
       "api": "https://cdn.jsdmirror.com/gh/ouhaibo1980/tvbox@main/py/py_douban.py",
       "searchable": 0,
@@ -138,7 +138,7 @@
     },
     {
       "key": "豆瓣4",
-      "name": "📢长期维护切勿贩卖",
+      "name": "长期维护切勿贩卖",
       "type": 3,
       "api": "csp_Douban",
       "searchable": 0
