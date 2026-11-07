@@ -21,6 +21,7 @@
 import datetime
 import json
 import os
+import re
 import sys
 import time
 import urllib.parse
@@ -46,6 +47,59 @@ SOURCE_INTERVAL = 2  # 每个源之间的间隔秒数（降低被限流概率）
 TVBOX_KEYS = ("sites", "spiders", "lives", "store", "exts", "parses", "flags")
 # 多仓订阅格式：顶层为 urls 数组
 MULTI_KEYS = ("urls", "订阅")
+
+# ---------- 站点名称清理（去除 emoji / 特殊符号，兼容低版本安卓） ----------
+_EMOJI_RE = re.compile(
+    '['
+    '\U0001F300-\U0001F9FF'   # Misc symbols, emoticons, transport …
+    '\U0001FA00-\U0001FAFF'   # Chess symbols, extended-A
+    '\U0001F000-\U0001F02F'   # Mahjong tiles
+    '\U0001F0A0-\U0001F0FF'   # Playing cards
+    '\U0001F100-\U0001F1FF'   # Enclosed alphanumeric (🅱 🆎 …)
+    '\U0001F200-\U0001F2FF'   # Enclosed ideographic
+    '\U00002600-\U000027BF'   # Misc symbols + Dingbats
+    '\U00002B00-\U00002BFF'   # Arrows, stars
+    '\U00002300-\U000023FF'   # Misc technical (⏮ ⏳ …)
+    '\U0000FE00-\U0000FE0F'   # Variation selectors
+    '\U000020E3'              # Combining enclosing keycap
+    '\U0000203C'              # ‼
+    '\U00002049'              # ⁉
+    '\U00002122'              # ™
+    '\U000000A9'              # ©
+    '\U000000AE'              # ®
+    '\U00002460-\U000024FF'   # Circled numbers ①② …
+    '\U00002500-\U0000257F'   # Box drawing
+    '\U000025A0-\U000025FF'   # Geometric shapes
+    ']+',
+    flags=re.UNICODE,
+)
+_EXTRA_CHARS = str.maketrans('', '', '\ufe0f\ufe0e\u200d┃')
+
+
+def clean_site_name(name: str) -> str:
+    """去掉 name 中的 emoji、┃ 等装饰符号，只保留纯文字。"""
+    if not name:
+        return name
+    name = name.translate(_EXTRA_CHARS)
+    name = _EMOJI_RE.sub('', name)
+    name = name.strip()
+    name = re.sub(r'  +', ' ', name)          # 多余空格合并
+    return name
+
+
+def _clean_config_names(data: dict) -> dict:
+    """递归清理配置中所有 sites 条目的 name 字段。"""
+    if not isinstance(data, dict):
+        return data
+    for site in data.get('sites', []) or []:
+        if isinstance(site, dict) and 'name' in site:
+            site['name'] = clean_site_name(site['name'])
+    # 多仓订阅格式也清理
+    for entry in data.get('urls', []) or []:
+        if isinstance(entry, dict) and 'name' in entry:
+            entry['name'] = clean_site_name(entry['name'])
+    return data
+# --------------------------------------------------------------------------
 
 
 def _strip_js_comments(text: str) -> str:
@@ -307,6 +361,9 @@ def main() -> int:
         for url in urls:
             try:
                 data = fetch_config(url)
+                # ---- 清理站点名称中的 emoji / 特殊符号 ----
+                _clean_config_names(data)
+                # --------------------------------------------
                 out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
                 with open(out_path, "w", encoding="utf-8") as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
@@ -365,6 +422,9 @@ def main() -> int:
     merged = merge_configs(fetched)
     merged_path = os.path.join(OUTPUT_DIR, "单仓聚合.json")
     if merged is not None:
+        # ---- 对聚合结果再做一次全量清理（兜底） ----
+        _clean_config_names(merged)
+        # --------------------------------------------
         with open(merged_path, "w", encoding="utf-8") as f:
             json.dump(merged, f, ensure_ascii=False, indent=2)
         print(f"聚合单仓：{merged_path}（共 {len(merged.get('sites', []))} 个站点）")
