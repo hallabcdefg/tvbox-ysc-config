@@ -393,6 +393,12 @@ def main() -> int:
                     with open(cache_path, "r", encoding="utf-8") as f:
                         cached = json.load(f)
                     if is_valid_tvbox_config(cached):
+                        # ---- 缓存文件也清理一遍（可能是旧版未清理的） ----
+                        _clean_config_names(cached)
+                        # 清理后回写缓存，下次就不用再清了
+                        with open(cache_path, "w", encoding="utf-8") as fw:
+                            json.dump(cached, fw, ensure_ascii=False, indent=2)
+                        # --------------------------------------------------
                         subscriptions.append(
                             {"name": name, "url": f"{raw_base}/{sid}.json"}
                         )
